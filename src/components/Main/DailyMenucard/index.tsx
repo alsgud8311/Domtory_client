@@ -66,5 +66,5 @@ export default function DailyMenuCard() {
     getMenuData();
   }, []);
 
-  return <div>qfw</div>;
+  return <div>qwqrwqrwqrwqr</div>;
 }
