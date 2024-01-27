@@ -64,7 +64,7 @@ export default function Header() {
             <Bars3Icon className="h-7 w-7" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden items-center lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
               내 정보
@@ -119,18 +119,21 @@ export default function Header() {
           >
             커뮤니티
           </Link>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <div className="text-sm font-semibold leading-6 text-gray-900">
             외박신청
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </div>
+          <div className="text-sm font-semibold leading-6 text-gray-900">
             학사 공지사항
-          </a>
+          </div>
+          <div className="hidden rounded-md bg-orange-300 pr-4 pl-4 pt-1 pb-1 lg:flex lg:flex-1 lg:justify-center">
+            <Link
+              href="/login"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
+              로그인 <span aria-hidden="true"></span>
+            </Link>
+          </div>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
       </nav>
       <Dialog
         as="div"
@@ -143,11 +146,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              <Image className="h-8 w-auto" src={logo} alt="" />
             </a>
             <button
               type="button"
