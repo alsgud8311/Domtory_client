@@ -1,3 +1,1 @@
-export default function MainPage() {
-  return <div></div>;
-}
+export { default } from "@/containers/home";
