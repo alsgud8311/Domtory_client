@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // 모든 상대 경로의 기준을 프로젝트 루트로 설정
+    "paths": {
+      "@/*": ["./src/*"] // src 폴더에 대한 경로 별칭 설정
+    },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,10 +20,7 @@
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
