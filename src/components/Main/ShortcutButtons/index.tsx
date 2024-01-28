@@ -8,52 +8,104 @@ import Link from "next/link";
 
 export default function ShortcutButtons() {
   return (
-    <div className="w-full flex justify-center p-2">
-      <div className="w-20 flex justify-center flex-col gap-2 items-center">
-        <a
-          target="_blank"
-          href="http://www.cbhs2.kr/main"
-          className="w-[70%] items-center"
-        >
-          <Image src={dorm} alt="dorm" />
-        </a>
-        <p>충북학사</p>
+    // 모바일용 크기
+    <div className="pl-4 pr-4 text-sm">
+      <div className="w-full flex justify-center p-2 sm:hidden">
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://www.cbhs2.kr/main"
+            className="w-[70%] items-center"
+          >
+            <Image src={dorm} alt="dorm" />
+          </a>
+          <p>충북학사</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://1.246.219.13:8080/cbhs/indexstdds.html?var1=M000004116"
+            className="w-[70%] items-center"
+          >
+            <Image src={night} alt="nightOut" />
+          </a>
+          <p>외박신청</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <Link href="/notice" className="w-[70%] items-center">
+            <Image src={notice} alt="announcement" />
+          </Link>
+          <p>공지사항</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://1.246.219.13:8080/cbhs/indexstdds.html?var1=M000004115"
+            className="w-[70%] items-center"
+          >
+            <Image src={tools} alt="tools" />
+          </a>
+          <p>시설보수</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://www.cbhs2.kr/0000038#"
+            className="w-[70%] items-center"
+          >
+            <Image src={books} alt="books" />
+          </a>
+          <p>도서관</p>
+        </div>
       </div>
-      <div className="w-20 flex justify-center flex-col gap-2 items-center">
-        <a
-          target="_blank"
-          href="http://1.246.219.13:8080/cbhs/indexstdds.html?var1=M000004116"
-          className="w-[70%] items-center"
-        >
-          <Image src={night} alt="nightOut" />
-        </a>
-        <p>외박신청</p>
-      </div>
-      <div className="w-20 flex justify-center flex-col gap-2 items-center">
-        <Link href="/notice" className="w-[70%] items-center">
-          <Image src={notice} alt="announcement" />
-        </Link>
-        <p>공지사항</p>
-      </div>
-      <div className="w-20 flex justify-center flex-col gap-2 items-center">
-        <a
-          target="_blank"
-          href="http://1.246.219.13:8080/cbhs/indexstdds.html?var1=M000004115"
-          className="w-[70%] items-center"
-        >
-          <Image src={tools} alt="tools" />
-        </a>
-        <p>시설보수</p>
-      </div>
-      <div className="w-20 flex justify-center flex-col gap-2 items-center">
-        <a
-          target="_blank"
-          href="http://www.cbhs2.kr/0000038#"
-          className="w-[70%] items-center"
-        >
-          <Image src={books} alt="books" />
-        </a>
-        <p>도서관</p>
+      {/* 중간 사이즈 크기 */}
+      <div className="hidden sm:flex w-1/2 justify-center p-4 box-border">
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://www.cbhs2.kr/main"
+            className="w-[70%] items-center"
+          >
+            <Image src={dorm} alt="dorm" />
+          </a>
+          <p>충북학사</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://1.246.219.13:8080/cbhs/indexstdds.html?var1=M000004116"
+            className="w-[70%] items-center"
+          >
+            <Image src={night} alt="nightOut" />
+          </a>
+          <p>외박신청</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <Link href="/notice" className="w-[70%] items-center">
+            <Image src={notice} alt="announcement" />
+          </Link>
+          <p>공지사항</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://1.246.219.13:8080/cbhs/indexstdds.html?var1=M000004115"
+            className="w-[70%] items-center"
+          >
+            <Image src={tools} alt="tools" />
+          </a>
+          <p>시설보수</p>
+        </div>
+        <div className="w-20 flex justify-center flex-col gap-2 items-center">
+          <a
+            target="_blank"
+            href="http://www.cbhs2.kr/0000038#"
+            className="w-[70%] items-center"
+          >
+            <Image src={books} alt="books" />
+          </a>
+          <p>도서관</p>
+        </div>
       </div>
     </div>
   );
