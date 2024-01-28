@@ -29,9 +29,9 @@ export default function DailyMenuCard() {
       today.setDate(today.getDate() + 1);
     }
 
-    const formatedDate = `${
-      today.getMonth() + 1
-    }.${today.getDate()}(${dayOfWeek})`;
+    const formatedDate = `${today.getMonth() + 1}.${today.getDate()}(${
+      week[today.getDay()]
+    })`;
     setFormatedDate(formatedDate);
 
     const formatedDateForApi = `${today
@@ -68,46 +68,21 @@ export default function DailyMenuCard() {
 
   return (
     <>
-      {/* 모바일용 크기 */}
-      <section className="p-4">
-        <div className="rounded-md min-w- sm:hidden border-orange-300 bg-orange-200 p-4 border-2 shadow-lg">
-          <p className="text-xl">1.28(SUN)</p>
-          <p className="text-xl border-b-2 border-orange-500">저녁</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-        </div>
-      </section>
-      {/* 데스크탑용 크기 */}
-      <section className="pl-8 pr-8 w-full flex box-border">
-        <div className="hidden rounded-md lg:flex flex-col w-1/4 border-orange-300 bg-orange-200 p-4 border-2 shadow-lg box-border">
-          <p className="text-xl">1.28(SUN)</p>
-          <p className="text-xl border-b-2 border-orange-500">저녁</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-        </div>
-      </section>
-      {/* 태블릿정도 크기 */}
-      <section className="pl-8 pr-8 w-full flex box-border">
-        <div className="hidden rounded-md sm:flex lg:hidden flex-col w-1/2 border-orange-300 bg-orange-200 p-4 border-2 shadow-lg box-border">
-          <p className="text-xl">1.28(SUN)</p>
-          <p className="text-xl border-b-2 border-orange-500">저녁</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
-          <p>배고프다</p>
+      <section className="w-full p-4 max-w-[30rem]">
+        <div className="w-full rounded-md border-orange-300 bg-orange-200 p-4 border-2 shadow-lg">
+          <p className="text-xl p-3">{formatedDate}</p>
+          <p className="text-xl border-b-2 border-orange-500 pl-3 pr-3 pb-3">
+            {dayDiv}
+          </p>
+          <div className="p-4">
+            <p>배고프다</p>
+            <p>배고프다</p>
+            <p>배고프다</p>
+            <p>배고프다</p>
+            <p>배고프다</p>
+            <p>배고프다</p>
+            <p>배고프다</p>
+          </div>
         </div>
       </section>
     </>
