@@ -87,10 +87,11 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Domtory</span>
             <Image className="h-8 w-auto" src={logo} alt="domtory" />
           </Link>
         </div>
+        {/* 작은 화면 반응형 햄버거 */}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -322,25 +323,3 @@ export default function Header() {
     </header>
   );
 }
-// import Image from "next/image";
-// import icon from "../app/icon.png";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBell, faBars } from "@fortawesome/free-solid-svg-icons";
-// import { useState } from "react";
-// import Sidebar from "./sidebar/sidebar";
-
-// export function Header() {
-//   const [isOpen, setIsOpen] = useState(false);
-//   return (
-//     <main className="flex justify-between pt-4 pb-4 pr-4 pl-4 box-border">
-//       <div className="flex h-10 items-center gap-4">
-//         <Image src={icon} alt="domtory" className="w-10" />
-//         <p className="text-2xl">Domtory</p>
-//       </div>
-//       <div className="h-10" onClick={() => setIsOpen(true)}>
-//         <FontAwesomeIcon icon={faBars} className="h-full" />
-//       </div>
-//       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-//     </main>
-//   );
-// }
