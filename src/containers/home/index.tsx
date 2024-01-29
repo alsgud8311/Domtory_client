@@ -4,13 +4,13 @@ import ShortcutButtons from "@/components/Main/ShortcutButtons";
 const Home = () => {
   return (
     <>
-      <main className="flex lg:hidden w-full items-center">
+      <main className="flex lg:hidden w-full items-center p-4">
         <div className="w-full flex flex-col justify-center items-center">
           <DailyMenuCard />
           <ShortcutButtons />
         </div>
       </main>
-      <main className="lg:flex hidden w-full flex-col">
+      <main className="lg:flex hidden w-full flex-col p-4">
         <div className="w-[50%] flex flex-col justify-start">
           <DailyMenuCard />
           <ShortcutButtons />

@@ -71,7 +71,7 @@ export default function DailyMenuCard() {
       <section className="w-full p-4 max-w-[30rem]">
         <div className="w-full rounded-md border-orange-300 bg-orange-200 p-4 border-2 shadow-lg">
           <p className="text-xl p-3">{formatedDate}</p>
-          <p className="text-xl border-b-2 border-orange-500 pl-3 pr-3 pb-3">
+          <p className="text-xl border-b-2 border-orange-300 pl-3 pr-3 pb-3">
             {dayDiv}
           </p>
           <div className="p-4">
